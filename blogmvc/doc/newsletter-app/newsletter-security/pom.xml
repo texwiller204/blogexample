@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.ewheezy.yayatow</groupId>
+    <artifactId>newsletter-app</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.ewheezy.yayatow.newsletter </groupId>
+  <artifactId>newsletter-security</artifactId>
+  <name>Newsletter Security</name>
+  <description>Newsletter Security</description>
+  
+  
+  
+  
+   <build>
+       <finalName>${project.artifactId}-${project.version}-${profile-suffix}</finalName>	    
+   </build>
+
+  
+    <dependencies>
+    <dependency>
+        <groupId>com.ewheezy.yayatow.newsletter</groupId>
+        <artifactId>newsletter-repository</artifactId>
+        <version>${project.version}</version>
+    </dependency>        
+    
+    
+    <!-- Spring Security -->
+   	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-core</artifactId>
+		<version>${spring-security.version}</version>
+	</dependency>
+	
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-web</artifactId>
+      <version>${spring-security.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-config</artifactId>
+      <version>${spring-security.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-taglibs</artifactId>
+      <version>${spring-security.version}</version>
+    </dependency>
+    <!-- End Spring Security -->	
+    
+    
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>${servlet-api.version}</version>
+    </dependency>
+  </dependencies>
+  
+  
+</project>

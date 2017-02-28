@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.ewheezy.yayatow</groupId>
+    <artifactId>newsletter-app</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.ewheezy.yayatow.newsletter</groupId>
+  <artifactId>newsletter-config</artifactId>
+  <name>Newsletter Config</name>
+  <description>Newsletter Config</description>
+  
+    
+  	<build>
+		<filters>
+			<filter>${filter-file-name}</filter>
+		</filters>
+		<finalName>${project.artifactId}-${project.version}-${profile-suffix}</finalName>
+		<resources>
+			<resource>
+				<filtering>true</filtering>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
+		<plugins>
+	   
+           <!-- Eclipse project -->
+	      <plugin>
+		      <groupId>org.apache.maven.plugins</groupId>
+		      <artifactId>maven-eclipse-plugin</artifactId>
+		      <version>2.9</version>
+		      <configuration>
+		              <!-- Always download and attach dependencies source code -->
+		        <downloadSources>true</downloadSources>
+		        <downloadJavadocs>false</downloadJavadocs>
+		        <!-- Avoid type mvn eclipse:eclipse -Dwtpversion=2.0 -->
+		        <wtpversion>2.0</wtpversion>
+		      </configuration>
+	      </plugin>
+		</plugins>
+	</build>
+	
+</project>

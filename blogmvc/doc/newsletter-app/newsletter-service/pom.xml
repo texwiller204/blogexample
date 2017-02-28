@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.ewheezy.yayatow</groupId>
+    <artifactId>newsletter-app</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.ewheezy.yayatow.newsletter</groupId>
+  <artifactId>newsletter-service</artifactId>
+  <name>Newsletter Service</name>
+  <description>Newsletter Service</description>
+  
+     
+     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <junit.version>4.12</junit.version>
+        <mail.version>1.5.0-b01</mail.version>
+        <quartz.version>2.2.1</quartz.version>
+    </properties>
+     
+     
+    	<build>
+	        <finalName>${project.artifactId}-${project.version}-${profile-suffix}</finalName>	    
+	    </build>
+	         
+  
+      <dependencies>
+        <dependency>
+            <groupId>com.ewheezy.yayatow.newsletter</groupId>            
+            <artifactId>newsletter-repository</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+         </dependency>
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz-jobs</artifactId>
+            <version>${quartz.version}</version>
+        </dependency>
+        
+        </dependencies>
+</project>

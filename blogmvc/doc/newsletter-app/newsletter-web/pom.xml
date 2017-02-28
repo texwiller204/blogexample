@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.ewheezy.yayatow</groupId>
+    <artifactId>newsletter-app</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  
+  <groupId>com.ewheezy.yayatow.newsletter</groupId>
+  <artifactId>newsletter-web</artifactId>
+  <packaging>war</packaging>
+  <name>Newsletter Web</name>
+  <description>Newsletter Web</description>
+  
+  
+
+    <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <spring-webmvc.version>4.2.2.RELEASE</spring-webmvc.version>
+      <jstl.version>1.2</jstl.version>
+      <compiler-plugin.version>3.3</compiler-plugin.version>
+      <maven.compiler.source>1.8</maven.compiler.source>
+      <maven.compiler.target>1.8</maven.compiler.target>      
+  </properties>
+ 
+ 
+ 
+    <build>
+        <finalName>${project.artifactId}-${project.version}-${profile-suffix}</finalName>	    
+    </build>
+  
+   <dependencies>
+        <dependency>
+            <groupId>com.ewheezy.yayatow.newsletter</groupId>
+            <artifactId>newsletter-service</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring-webmvc.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${jstl.version}</version>
+        </dependency>
+       
+        
+    </dependencies>
+    
+    
+     
+  
+  
+</project>
