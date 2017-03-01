@@ -1,238 +1,263 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.wheezy.blog</groupId>
-  <artifactId>blogmvc</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>blogmvc</name>
-  <description>blogmvc</description>
-  
-     <properties>
-      <!-- java versions -->
-      <java-version>1.8</java-version>
-      	  
-      <project-version>1.0</project-version>
-      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	        
-      <persistence-api-version>1.0.2</persistence-api-version>
-      <org.eclipse.persistence-version>2.5.1</org.eclipse.persistence-version>
-            
-      <spring.version>4.3.3.RELEASE</spring.version>
-      <hibernate.version>4.3.6.Final</hibernate.version>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.wheezy.blog</groupId>
+	<artifactId>blogmvc</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>blogmvc</name>
+	<description>blogmvc</description>
 
+	<properties>
+		<!-- java versions -->
+		<java-version>1.8</java-version>
+
+		<project-version>1.0</project-version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+ 
+		<persistence-api-version>1.0.2</persistence-api-version>
+		<org.eclipse.persistence-version>2.5.1</org.eclipse.persistence-version>
+
+ 
+		<spring.version>4.3.3.RELEASE</spring.version>
+		<spring.security.version>3.2.8.RELEASE</spring.security.version>
+		<spring-data-jpa.version>1.10.7.RELEASE</spring-data-jpa.version>
 		
-      <junit-version>4.11</junit-version>
-      
-	  <org.sitemesh.sitemesh.version>3.0-alpha-2</org.sitemesh.sitemesh.version>
-      
-      <maven.compiler-version>3.3</maven.compiler-version>
-      
-      <org.slf4j-version>1.7.12</org.slf4j-version>
-      
-      <persistence-api-version>1.0.2</persistence-api-version>
-      <org.eclipse.persistence-version>2.5.1</org.eclipse.persistence-version>
-      
-
-      <servlet.api-version>2.5</servlet.api-version>
-      
-      
-   </properties>
-   
-   
-   
-  <modules>
-    <module>blogmvc-model</module>
-    <module>blogmvc-service</module>
-    <module>blogmvc-repository</module>
-    <module>blogmvc-web</module>
-    <module>blogmvc-utils</module>
-    <module>blogmvc-config</module>
-  </modules>
-  
-  
-  <!-- 
-    <repositories>
-        <repository>
-            <id>eap</id>
-            <url>http://maven.repository.redhat.com/techpreview/all</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>eap</id>
-            <url>http://maven.repository.redhat.com/techpreview/all</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>-->
-    
-   <build>
-     <pluginManagement>
-      <plugins>    
-           <plugin>
-             <groupId>org.apache.maven.plugins</groupId>
-             <artifactId>maven-dependency-plugin</artifactId>
-             <version>2.10</version>
-          </plugin>
-          <plugin>
-             <groupId>org.apache.maven.plugins</groupId>
-             <artifactId>maven-assembly-plugin</artifactId>
-             <version>2.6</version>
-          </plugin>
-                  
-         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>${maven.compiler-version}</version>
-            <configuration>
-               <source>${java-version}</source>
-               <target>${java-version}</target>
-               <encoding>${project.build.sourceEncoding}</encoding>
-               <compilerArgument>-Xlint:all</compilerArgument>
-               <showWarnings>true</showWarnings>
-               <showDeprecation>true</showDeprecation>
-            </configuration>
-         </plugin>
-         
-          
-        <plugin>
-        
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-maven-plugin</artifactId>
-            <version>9.3.5.v20151012</version>
-            <configuration>
-                <scanIntervalSeconds>10</scanIntervalSeconds>
-                <webApp>
-                    <contextPath>/newsletter</contextPath>
-                </webApp>
-            </configuration>
-        </plugin>
-        
-        
-        <!-- download source code in Eclipse, best practice -->
-         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-eclipse-plugin</artifactId>
-            <version>2.9</version>
-            <configuration>
-               <!-- Always download and attach dependencies source code -->
-               <downloadSources>true</downloadSources>
-               <downloadJavadocs>false</downloadJavadocs>
-               <!-- Avoid type mvn eclipse:eclipse -Dwtpversion=2.0 -->
-               <wtpversion>2.0</wtpversion>
-               <wtpContextName>newsletter</wtpContextName>
-            </configuration>
-         </plugin>
-      </plugins>
-      </pluginManagement>
-   </build>
-   
-    
-       <dependencyManagement>
-        <dependencies>
-        
- 		<!-- jdbc driver -->
- 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.38</version>			
-		</dependency>
+		<hibernate.version>4.3.6.Final</hibernate.version>
+		<junit.version>4.11</junit.version>
+		<tomcat-version>8.0.15</tomcat-version>
 		
-		<!-- web -->
-		<dependency>
-		    <groupId>taglibs</groupId>
-		    <artifactId>standard</artifactId>
-		    <version>1.1.2</version>
-		</dependency>
-		<dependency>
-		    <groupId>javax.servlet</groupId>
-		    <artifactId>jstl</artifactId>
-		    <version>1.2</version>
-		</dependency>
+		<javax.servlet.jstl.version>1.1.2</javax.servlet.jstl.version>
+        <taglibs.standard.version>1.1.2</taglibs.standard.version>
+        <org.sitemesh.sitemesh.version>3.0-alpha-2</org.sitemesh.sitemesh.version>        
+        <javax.servlet.servlet-api.version>2.5</javax.servlet.servlet-api.version>
+        <javax.servlet.jsp.jsp-api>2.2</javax.servlet.jsp.jsp-api>
+        
 
-      <!-- JUnit -->
-      <dependency>
-         <groupId>junit</groupId>
-         <artifactId>junit</artifactId>
-         <version>${junit-version}</version>
-         <scope>test</scope>
-      </dependency>
-      
-        <!-- Logging -->
-		<!-- Log4j -->
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			 <version>1.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>${org.slf4j-version}</version>
-		</dependency>        		
-		<!-- End Logging -->
-		
-   </dependencies>
-    </dependencyManagement>
+		<maven.compiler-version>3.3</maven.compiler-version>
 
-   
-   <!-- Profile configuration -->
-   <!-- @Profiles -->
-   <profiles>
-      <profile>
-         <id>env-dev</id>
-         <activation>
-            <activeByDefault>true</activeByDefault>
-         </activation>
-         <properties>
-            <module-config-scope>compile</module-config-scope>
-            <filter-file-name>src/filters/env-dev.properties</filter-file-name>
-            <profile-suffix>env-dev</profile-suffix>
-         </properties>
-      </profile>
-      <profile>
-         <id>env-integ</id>
-         <properties>
-            <module-config-scope>provided</module-config-scope>
-            <filter-file-name>src/filters/env-integ.properties</filter-file-name>
-            <profile-suffix>env-integ</profile-suffix>
-         </properties>
-      </profile>
-      <profile>
-         <id>env-recette</id>
-         <properties>
-            <module-config-scope>provided</module-config-scope>
-            <filter-file-name>src/filters/env-recette.properties</filter-file-name>
-            <profile-suffix>env-recette</profile-suffix>
-         </properties>
-      </profile>
-      <profile>
-         <id>env-test</id>
-         <properties>
-            <module-config-scope>provided</module-config-scope>
-            <filter-file-name>src/filters/env-test.properties</filter-file-name>
-            <profile-suffix>env-test</profile-suffix>
-         </properties>
-      </profile>
-      <profile>
-         <id>env-prod</id>
-         <properties>
-            <module-config-scope>provided</module-config-scope>
-            <filter-file-name>src/filters/env-prod.properties</filter-file-name>
-            <profile-suffix>env-prod</profile-suffix>
-         </properties>
-      </profile>
-   </profiles>
-     
+		<org.slf4j-version>1.7.12</org.slf4j-version>
+
+		<persistence-api-version>1.0.2</persistence-api-version>
+		<org.eclipse.persistence-version>2.5.1</org.eclipse.persistence-version>
+
+
+		<servlet.api-version>2.5</servlet.api-version>
+
+
+	</properties>
+
+
+
+	<modules>
+		<module>blogmvc-model</module>
+		<module>blogmvc-service</module>
+		<module>blogmvc-repository</module>
+		<module>blogmvc-web</module>
+		<module>blogmvc-utils</module>
+		<module>blogmvc-config</module>
+	</modules>
+
+	<!-- <repository> <id>com.springsource.repository.bundles.release</id> <name>SpringSource 
+		Enterprise Bundle Repository - SpringSource Bundle Releases</name> <url>http://repository.springsource.com/maven/bundles/release</url> 
+		</repository> <repository> <id>com.springsource.repository.bundles.external</id> 
+		<name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name> 
+		<url>http://repository.springsource.com/maven/bundles/external</url> </repository> -->
+
+	<repositories>
+		<repository>
+			<id>eap</id>
+			<url>http://maven.repository.redhat.com/techpreview/all</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>eap</id>
+			<url>http://maven.repository.redhat.com/techpreview/all</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>2.10</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>2.6</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven.compiler-version}</version>
+					<configuration>
+						<source>${java-version}</source>
+						<target>${java-version}</target>
+						<encoding>${project.build.sourceEncoding}</encoding>
+						<compilerArgument>-Xlint:all</compilerArgument>
+						<showWarnings>true</showWarnings>
+						<showDeprecation>true</showDeprecation>
+					</configuration>
+				</plugin>
+
+
+				<plugin>
+
+					<groupId>org.eclipse.jetty</groupId>
+					<artifactId>jetty-maven-plugin</artifactId>
+					<version>9.3.5.v20151012</version>
+					<configuration>
+						<scanIntervalSeconds>10</scanIntervalSeconds>
+						<webApp>
+							<contextPath>/newsletter</contextPath>
+						</webApp>
+					</configuration>
+				</plugin>
+
+
+				<!-- download source code in Eclipse, best practice -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-eclipse-plugin</artifactId>
+					<version>2.9</version>
+					<configuration>
+						<!-- Always download and attach dependencies source code -->
+						<downloadSources>true</downloadSources>
+						<downloadJavadocs>false</downloadJavadocs>
+						<!-- Avoid type mvn eclipse:eclipse -Dwtpversion=2.0 -->
+						<wtpversion>2.0</wtpversion>
+						<wtpContextName>newsletter</wtpContextName>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+
+	<dependencyManagement>
+		<dependencies>
+
+
+
+			<!-- log4j dependency -->
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>1.2.14</version>
+			</dependency>
+
+
+
+			<!-- jdbc driver -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>5.1.38</version>
+			</dependency>
+
+			<!-- web -->
+			<dependency>
+				<groupId>taglibs</groupId>
+				<artifactId>standard</artifactId>
+				<version>1.1.2</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>jstl</artifactId>
+				<version>1.2</version>
+			</dependency>
+
+			<!-- JUnit -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit-version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<!-- Logging -->
+			<!-- Log4j -->
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>1.2.12</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${org.slf4j-version}</version>
+			</dependency>
+			<!-- End Logging -->
+
+		</dependencies>
+	</dependencyManagement>
+
+
+	<!-- Profile configuration -->
+	<!-- @Profiles -->
+	<profiles>
+		<profile>
+			<id>env-dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<module-config-scope>compile</module-config-scope>
+				<filter-file-name>src/filters/env-dev.properties</filter-file-name>
+				<profile-suffix>env-dev</profile-suffix>
+			</properties>
+		</profile>
+		<profile>
+			<id>env-integ</id>
+			<properties>
+				<module-config-scope>provided</module-config-scope>
+				<filter-file-name>src/filters/env-integ.properties</filter-file-name>
+				<profile-suffix>env-integ</profile-suffix>
+			</properties>
+		</profile>
+		<profile>
+			<id>env-recette</id>
+			<properties>
+				<module-config-scope>provided</module-config-scope>
+				<filter-file-name>src/filters/env-recette.properties</filter-file-name>
+				<profile-suffix>env-recette</profile-suffix>
+			</properties>
+		</profile>
+		<profile>
+			<id>env-test</id>
+			<properties>
+				<module-config-scope>provided</module-config-scope>
+				<filter-file-name>src/filters/env-test.properties</filter-file-name>
+				<profile-suffix>env-test</profile-suffix>
+			</properties>
+		</profile>
+		<profile>
+			<id>env-prod</id>
+			<properties>
+				<module-config-scope>provided</module-config-scope>
+				<filter-file-name>src/filters/env-prod.properties</filter-file-name>
+				<profile-suffix>env-prod</profile-suffix>
+			</properties>
+		</profile>
+	</profiles>
+
 </project>
