@@ -8,9 +8,7 @@
 		<artifactId>blogmvc</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.wheezy.blog</groupId>
 	<artifactId>blogmvc-web</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>blogmvc-web Maven Webapp</name>
 	<url>http://maven.apache.org</url>
@@ -139,12 +137,15 @@
             <version>${org.sitemesh.sitemesh.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>${javax.servlet.servlet-api.version}</version>
-            <scope>provided</scope>
-        </dependency>
+		<!-- @JAVAX : SERVLET & JSP & JSTL -->
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		     <version>${javax.servlet-api.version}</version>
+		    <scope>provided</scope>
+		</dependency>
+		
         <dependency>
             <groupId>javax.servlet.jsp</groupId>
             <artifactId>jsp-api</artifactId>

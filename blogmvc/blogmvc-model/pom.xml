@@ -10,7 +10,6 @@
 	</parent>
 
 	<artifactId>blogmvc-model</artifactId>
-
 	<name>blogmvc-model</name>
 	<url>http://maven.apache.org</url>
 	<properties>
@@ -36,7 +35,6 @@
 				<filtering>true</filtering>
 			</resource>
 		</resources>
-
 
 	</build>
 

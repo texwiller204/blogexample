@@ -8,9 +8,9 @@
 		<artifactId>blogmvc</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.wheezy.blog</groupId>
+
 	<artifactId>blogmvc-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	
 	<name>blogmvc-service</name>
 	<url>http://maven.apache.org</url>
 	<properties>

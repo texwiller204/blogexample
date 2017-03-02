@@ -6,37 +6,34 @@
 		<artifactId>blogmvc</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.wheezy.blog</groupId>
+	
 	<artifactId>blogmvc-repository</artifactId>
 	<name>blogmvc-repository</name>
 	<description>blogmvc repository</description>
 
-
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
 	<build>
 		<finalName>${project.artifactId}-${project.version}-${profile-suffix}</finalName>
 
-
-		<sourceDirectory>${project.basedir}src/main/java</sourceDirectory>
-		<testSourceDirectory>${project.basedir}src/test/java</testSourceDirectory>
+		<sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
+		<testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
 
 		<testResources>
 			<testResource>
-				<directory>${project.basedir}src/test/resources</directory>
+				<directory>${project.basedir}/src/test/resources</directory>
 				<filtering>true</filtering>
 			</testResource>
 		</testResources>
 
 		<resources>
 			<resource>
-				<directory>${project.basedir}src/main/resources</directory>
+				<directory>${project.basedir}/src/main/resources</directory>
 				<filtering>true</filtering>
 			</resource>
 		</resources>
-
-		<plugins>
-
-
-		</plugins>
 
 	</build>
 
@@ -48,8 +45,6 @@
 			<version>${project.version}</version>
 			<type>jar</type>
 		</dependency>
-
-
 
 		<!-- spring -->
 		<dependency>
