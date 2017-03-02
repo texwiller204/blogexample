@@ -18,3 +18,13 @@ A simple blog created with Java/OOP to help me learn Java and familly related te
 - Maven.
 - Database, such as MySQL.
 - Web server, such as Apache Tomcat 8.0 (tested only on Tomcat, probably works on other web servers too, maybe requires minor modifications).
+
+
+
+###Credits 
+--------- 
+- Bootstrap : http://getbootstrap.com/
+- Fontawesome : https://fortawesome.github.io/Font-Awesome/
+- Fonts : https://www.google.com/fonts
+- Images : https://unsplash.com/ , https://www.pexels.com/ and https://pixabay.com/
+- Carousel : http://owlgraphic.com/owlcarousel/
