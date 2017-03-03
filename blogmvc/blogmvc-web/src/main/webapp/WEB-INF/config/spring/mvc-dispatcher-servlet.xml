@@ -1,0 +1,74 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:repository="http://www.springframework.org/schema/data/repository"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/data/jpa
+        http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/data/repository
+        http://www.springframework.org/schema/data/repository/spring-repository.xsd">
+
+
+
+	<context:component-scan base-package="info.harmia.polyglot.springapp.mvc" />
+	<mvc:annotation-driven />
+
+	<mvc:interceptors>
+		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" />
+	</mvc:interceptors>
+
+	<mvc:resources location="file:${uploading.dirpath}"
+		mapping="/uploads/**" />
+
+
+
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+		<property name="cookieName" value="locale" />
+		<property name="defaultLocale" value="en" />
+		<property name="cookieMaxAge" value="100000" />
+	</bean>
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+		<property name="requestContextAttribute" value="requestContext" />
+	</bean>
+
+
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="1048576" />
+	</bean>
+
+
+
+
+	<beans profile="dev">
+		<context:property-placeholder location="classpath:/uploading-dev.properties" />
+	</beans>
+
+	<beans profile="prod">
+		<context:property-placeholder location="classpath:/uploading-prod.properties" />
+	</beans>
+
+	<beans profile="test">
+		<context:property-placeholder location="classpath:/uploading-test.properties" />
+	</beans>
+
+
+</beans>        
+        

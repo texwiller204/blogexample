@@ -1,26 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<assembly>
-  <id>resources</id>
-  <formats>
-    <format>zip</format>
-  </formats>
-  <includeBaseDirectory>false</includeBaseDirectory>
-  
-    <!-- Adds the dependencies of our application to the lib directory -->
-    <dependencySets>
-        <dependencySet>
-            <!--
-                Project artifact is not copied under library directory since
-                it is added to the root directory of the zip package.
-            -->
-            <useProjectArtifact>false</useProjectArtifact>
-            <outputDirectory>lib</outputDirectory>
-            <unpack>false</unpack>
-        </dependencySet>
-    </dependencySets>
-      
-  <fileSets>
-	
+<assembly
+	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+	<id>resources</id>
+
+	<formats>
+		<format>zip</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+
+	<!-- Adds the dependencies of our application to the lib directory -->
+	<dependencySets>
+		<dependencySet>
+			<!-- Project artifact is not copied under library directory since it is 
+				added to the root directory of the zip package. -->
+			<useProjectArtifact>false</useProjectArtifact>
+			<outputDirectory>lib</outputDirectory>
+			<unpack>false</unpack>
+		</dependencySet>
+	</dependencySets>
+
+	<fileSets>
+
 		<fileSet>
 			<outputDirectory>/</outputDirectory>
 			<includes>
@@ -28,45 +29,47 @@
 			</includes>
 		</fileSet>
 
-  		<fileSet>
+		<fileSet>
 			<directory>lib</directory>
-			<outputDirectory>/lib</outputDirectory>			
+			<outputDirectory>/lib</outputDirectory>
 		</fileSet>
-				
+
 		<fileSet>
 			<directory>src/main/scripts</directory>
 			<outputDirectory>/bin</outputDirectory>
 			<fileMode>775</fileMode>
-            <includes>
-                <include>*.*</include>
-            </includes>
+			<includes>
+				<include>*.*</include>
+			</includes>
 		</fileSet>
-				
+
 		<fileSet>
 			<directory>src/main/resources/config</directory>
 			<outputDirectory>/config</outputDirectory>
+		</fileSet>
+		
+		<fileSet>
+			<directory>src/filters</directory>
+			<outputDirectory>/filters</outputDirectory>
 		</fileSet>
 
 		<fileSet>
 			<directory>src/main/resources/webapp</directory>
 			<outputDirectory>/webapp</outputDirectory>
 			<filtered>true</filtered>
-		</fileSet>		
+		</fileSet>
 		<fileSet>
 			<directory>src/main/resources/template</directory>
 			<outputDirectory>/template</outputDirectory>
 		</fileSet>
-					
-		<!-- 				
-		<fileSet>
-			<directory>src/main/resources/bin</directory>
-			<outputDirectory>/bin</outputDirectory>
-		</fileSet>   -->
+
+		<!-- <fileSet> <directory>src/main/resources/bin</directory> <outputDirectory>/bin</outputDirectory> 
+			</fileSet> -->
 
 		<fileSet>
 			<directory>src/main/resources/restful</directory>
 			<outputDirectory>/restful</outputDirectory>
-		</fileSet>			
+		</fileSet>
 
-  </fileSets>
+	</fileSets>
 </assembly>

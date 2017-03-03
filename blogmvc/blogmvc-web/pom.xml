@@ -17,6 +17,12 @@
 	<build>
 		<finalName>${project.artifactId}-${project.version}-${profile-suffix}</finalName>
 
+		<filters>
+			<filter>${filter-file-name}</filter>
+		</filters>
+
+
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -25,14 +31,60 @@
 				<configuration>
 					<warSourceDirectory>src/main/webapp</warSourceDirectory>
 					<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+					<!-- <webXml>${project.build.directory}/${project.build.finalName}/WEB-INF/web.xml</webXml> -->
+					
 				</configuration>
 			</plugin>
+			
+			<plugin>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>unpack-config</id>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <phase>generate-resources</phase>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>${project.groupId}</groupId>
+                                    <artifactId>blogmvc-config</artifactId>                                    
+                                    <classifier>resources</classifier>
+                                    <type>zip</type>
+                                    <overWrite>true</overWrite>
+                                    <outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/classes</outputDirectory>
+                                    <!-- <outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/config</outputDirectory> -->
+                                </artifactItem>
+                               </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
 		</plugins>
 
 	</build>
 
 	<dependencies>
 
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>blogmvc-config</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>blogmvc-model</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>blogmvc-repository</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+				
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>blogmvc-service</artifactId>

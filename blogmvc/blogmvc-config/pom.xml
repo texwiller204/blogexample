@@ -13,7 +13,9 @@
 	<!-- <name>blogmvc-config</name> <description>blogmvc config</description> 
 		<groupId>com.wheezy.blog</groupId> <version>0.0.1-SNAPSHOT</version> -->
 
-
+    <packaging>jar</packaging>
+    <name>Resource For WebApp</name>
+  
 	<build>
 		<filters>
 			<filter>${filter-file-name}</filter>
@@ -65,7 +67,7 @@
 						<phase>package</phase>
 						<goals>
 							<goal>single</goal>
-						</goals>
+						</goals>						
 					</execution>
 				</executions>
 			</plugin>
@@ -74,7 +76,6 @@
 	</build>
 
 	<dependencies>
-
 
 		<dependency>
 			<groupId>log4j</groupId>

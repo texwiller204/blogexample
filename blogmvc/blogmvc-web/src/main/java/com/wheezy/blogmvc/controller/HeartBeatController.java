@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping(value = "/heartbeat")
+@RequestMapping("/heartbeat")
 public class HeartBeatController {
 
     @RequestMapping(method = RequestMethod.GET)

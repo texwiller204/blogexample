@@ -47,6 +47,7 @@
 		<servlet.api-version>2.5</servlet.api-version>
 
 
+
 	</properties>
 
 
@@ -222,7 +223,7 @@
 			</activation>
 			<properties>
 				<module-config-scope>compile</module-config-scope>
-				<filter-file-name>src/filters/env-dev.properties</filter-file-name>
+				<filter-file-name>${basedir}/src/filters/env-dev.properties</filter-file-name>
 				<profile-suffix>env-dev</profile-suffix>
 			</properties>
 		</profile>
@@ -230,7 +231,7 @@
 			<id>env-integ</id>
 			<properties>
 				<module-config-scope>provided</module-config-scope>
-				<filter-file-name>src/filters/env-integ.properties</filter-file-name>
+				<filter-file-name>${basedir}/src/filters/env-integ.properties</filter-file-name>
 				<profile-suffix>env-integ</profile-suffix>
 			</properties>
 		</profile>
@@ -238,7 +239,7 @@
 			<id>env-recette</id>
 			<properties>
 				<module-config-scope>provided</module-config-scope>
-				<filter-file-name>src/filters/env-recette.properties</filter-file-name>
+				<filter-file-name>${basedir}/src/filters/env-recette.properties</filter-file-name>
 				<profile-suffix>env-recette</profile-suffix>
 			</properties>
 		</profile>
@@ -246,7 +247,7 @@
 			<id>env-test</id>
 			<properties>
 				<module-config-scope>provided</module-config-scope>
-				<filter-file-name>src/filters/env-test.properties</filter-file-name>
+				<filter-file-name>${basedir}/src/filters/env-test.properties</filter-file-name>
 				<profile-suffix>env-test</profile-suffix>
 			</properties>
 		</profile>
@@ -254,7 +255,7 @@
 			<id>env-prod</id>
 			<properties>
 				<module-config-scope>provided</module-config-scope>
-				<filter-file-name>src/filters/env-prod.properties</filter-file-name>
+				<filter-file-name>${basedir}/src/filters/env-prod.properties</filter-file-name>
 				<profile-suffix>env-prod</profile-suffix>
 			</properties>
 		</profile>
