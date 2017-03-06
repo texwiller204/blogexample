@@ -10,10 +10,20 @@
         http://www.springframework.org/schema/context 
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<mvc:annotation-driven />
+	<mvc:annotation-driven/>
+    
 
+	<!-- <import resource="mvc.xml"/> -->
+	 <import resource="db.xml"/> 
+	<!-- <import resource="profileproperty.xml"/> -->
+	<!-- <import resource="multithreading.xml"/> -->
+	
+	
 	<!-- Scans for application @Components to deploy -->
 	<context:component-scan base-package="com.wheezy.blogmvc.controller" />
+	<context:component-scan base-package="com.wheezy.blogmvc.services"/>
+    <context:component-scan base-package="com.wheezy.blogmvc.repository"/>
+    
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver ">
@@ -22,10 +32,12 @@
 	</bean>
 
 
+<!-- 
+    <bean name="pizzaRepository"
+          class="com.wheezy.blogmvc.repository.InMemPizzaRepository"
+          init-method="init"/>
+           -->
+          
 
-	<!-- <import resource="mvc.xml"/> -->
-	<!-- <import resource="db.xml"/> -->
-	<!-- <import resource="profileproperty.xml"/> -->
-	<!-- <import resource="multithreading.xml"/> -->
 
 </beans>

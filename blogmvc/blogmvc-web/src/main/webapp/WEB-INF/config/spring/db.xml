@@ -13,17 +13,17 @@
 		class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
 		<property name="locations">
 			<list>
-				<value>classpath:filters/env-dev.properties</value>
+				<!-- <value>classpath:filters/env-dev.properties</value> -->
+				<value>classpath:config/jdbc-mysql-db.properties</value>
 			</list>
 		</property>
 	</bean>
 
-
 	<bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource">
-		<property name="driverClassName" value="${jdbc.driverclassname}" />
-		<property name="url" value="${jdbc.url}" />
-		<property name="username" value="${jdbc.username}" />
-		<property name="password" value="${jdbc.password}" />
+		<property name="driverClassName" value="${dataSource.driverClassName}" />
+		<property name="url" value="${dataSource.url}" />
+		<property name="username" value="${dataSource.username}" />
+		<property name="password" value="${dataSource.password}" />
 		<property name="abandonWhenPercentageFull" value="60"></property>
 		<property name="jmxEnabled" value="true"></property>
 		<property name="logAbandoned" value="true"></property>
@@ -34,15 +34,61 @@
 		<property name="validationQuery" value="SELECT 1"></property>
 	</bean>
 
-	<context:component-scan base-package="com.ewheezy.blog">
+	<bean id="dataSource2"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${dataSource.driverClassName}" />
+		<property name="url" value="${dataSource.url}" />
+		<property name="username" value="${dataSource.username}" />
+		<property name="password" value="${dataSource.password}" />
+		<property name="abandonWhenPercentageFull" value="60"></property>
+		<property name="jmxEnabled" value="true"></property>
+		<property name="logAbandoned" value="true"></property>
+		<property name="maxActive" value="50"></property>
+		<property name="maxIdle" value="10"></property>
+		<property name="minIdle" value="5"></property>
+		<property name="testOnBorrow" value="true"></property>
+		<property name="validationQuery" value="SELECT 1"></property>
+	</bean>
+
+	<!-- <context:component-scan base-package="com.wheezy.blogmvc.controller">
 		<context:exclude-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
-	</context:component-scan>
+	</context:component-scan> -->
 
+
+    <tx:annotation-driven/>
+
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+        <property name="jpaDialect">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaDialect"/>
+        </property>
+    </bean>
+    
 
 	<!-- Create default configuration for Hibernate -->
+    <bean id="jpaProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="properties">
+			<props>
+				<prop key="hibernate.dialect">${dataSource.hibernate.Dialect}</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.use_sql_comments">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">${dataSource.hibernate.hbm2ddl.auto} </prop>  <!---->
+
+				<prop key="hibernate.validator.apply_to_ddl">false</prop>
+				<prop key="hibernate.validator.autoregister_listeners">false</prop>
+				<prop key="hibernate.ejb.naming_strategy">${dataSource.hibernate.ejb.naming_strategy}</prop>
+			</props>
+        </property>
+    </bean>
+    
+    
+
 	<bean id="hibernateJpaVendorAdapter"
 		class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+		
+        <bean id="hibernatePersistence" class="org.hibernate.ejb.HibernatePersistence"/>
 
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
@@ -51,27 +97,12 @@
 			<bean class="org.hibernate.ejb.HibernatePersistence" />
 		</property>
 
-		<property name="dataSource">
-			<ref bean="dataSource" />
-		</property>
 
-		<property name="jpaVendorAdapter" ref="hibernateJpaVendorAdapter" />
-		<property name="packagesToScan" value="com.packt.webstore.fkh.model.**" />
-
-		<property name="jpaProperties">
-			<props>
-				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
-				<prop key="hibernate.show_sql">true</prop>
-				<prop key="hibernate.format_sql">true</prop>
-				<prop key="hibernate.use_sql_comments">true</prop>
-				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto} </prop>  <!---->
-
-				<prop key="hibernate.validator.apply_to_ddl">false</prop>
-				<prop key="hibernate.validator.autoregister_listeners">false</prop>
-				<prop key="hibernate.ejb.naming_strategy">${hibernate.ejb.naming_strategy}</prop>
-
-			</props>
-		</property>
+		<property name="dataSource"        ref="dataSource" />
+		<property name="jpaVendorAdapter"  ref="hibernateJpaVendorAdapter" />
+        <property name="jpaProperties"     ref="jpaProperties"/>
+        
+        <property name="packagesToScan" value="com.wheezy.blogmvc.model.**" />
 
 
 	</bean>

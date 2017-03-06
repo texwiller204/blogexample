@@ -4,19 +4,16 @@
     <property name="context-root" value="newsletter"/>
     <wb-resource deploy-path="/" source-path="src/main/webapp"/>
     <property name="java-output-path" value="/target/classes"/>
-    <dependent-module archiveName="blogmvc-service.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/blogmvc-service/blogmvc-service">
+    <dependent-module archiveName="blogmvc-config.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/blogmvc-config/blogmvc-config">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="log4j-1.2.14.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/log4j/log4j/1.2.14/log4j-1.2.14.jar">
       <dependency-type>uses</dependency-type>
     </dependent-module>
     <dependent-module archiveName="blogmvc-model.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/blogmvc-model/blogmvc-model">
       <dependency-type>uses</dependency-type>
     </dependent-module>
     <dependent-module archiveName="blogmvc-utils.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/blogmvc-utils/blogmvc-utils">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="blogmvc-config.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/blogmvc-config/blogmvc-config">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="log4j-1.2.14.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/log4j/log4j/1.2.14/log4j-1.2.14.jar">
       <dependency-type>uses</dependency-type>
     </dependent-module>
     <dependent-module archiveName="commons-lang-2.6.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/commons-lang/commons-lang/2.6/commons-lang-2.6.jar">
@@ -137,6 +134,9 @@
       <dependency-type>uses</dependency-type>
     </dependent-module>
     <dependent-module archiveName="mysql-connector-java-5.1.38.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="blogmvc-service.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/blogmvc-service/blogmvc-service">
       <dependency-type>uses</dependency-type>
     </dependent-module>
     <dependent-module archiveName="spring-security-core-3.2.8.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/springframework/security/spring-security-core/3.2.8.RELEASE/spring-security-core-3.2.8.RELEASE.jar">

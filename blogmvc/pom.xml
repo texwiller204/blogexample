@@ -25,8 +25,14 @@
 		<spring.version>4.3.3.RELEASE</spring.version>
 		<spring.security.version>3.2.8.RELEASE</spring.security.version>
 		<spring-data-jpa.version>1.10.7.RELEASE</spring-data-jpa.version>		
-		<hibernate.version>4.3.6.Final</hibernate.version>		
-		<tomcat-version>8.0.15</tomcat-version>
+		<hibernate.version>4.3.6.Final</hibernate.version>
+		
+				
+		<!-- <tomcat-version>8.0.36</tomcat-version> -->
+		
+		<!--  <tomcat.version>7.0.63</tomcat.version> -->  
+		
+
 		
 		
 		<javax.servlet.jstl.version>1.1.2</javax.servlet.jstl.version>
@@ -66,20 +72,22 @@
 		</repository> <repository> <id>com.springsource.repository.bundles.external</id> 
 		<name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name> 
 		<url>http://repository.springsource.com/maven/bundles/external</url> </repository> -->
-
-	<repositories>
-		<repository>
-			<id>eap</id>
-			<url>http://maven.repository.redhat.com/techpreview/all</url>
-			<releases>
+		
+<pluginRepositories>
+	<pluginRepository>
+	         <id>codehaus</id>
+        <url>http://repository.codehaus.org/org/codehaus</url>
+        			<releases>
 				<enabled>true</enabled>
 			</releases>
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
-		</repository>
-	</repositories>
-	<pluginRepositories>
+		</pluginRepository>
+
+
+		
+	
 		<pluginRepository>
 			<id>eap</id>
 			<url>http://maven.repository.redhat.com/techpreview/all</url>
@@ -129,7 +137,7 @@
 					<configuration>
 						<scanIntervalSeconds>10</scanIntervalSeconds>
 						<webApp>
-							<contextPath>/newsletter</contextPath>
+							<contextPath>/blogmvc-web</contextPath>
 						</webApp>
 					</configuration>
 				</plugin>
@@ -146,7 +154,7 @@
 						<downloadJavadocs>false</downloadJavadocs>
 						<!-- Avoid type mvn eclipse:eclipse -Dwtpversion=2.0 -->
 						<wtpversion>2.0</wtpversion>
-						<wtpContextName>newsletter</wtpContextName>
+						<wtpContextName>blogmvc-web</wtpContextName> 
 					</configuration>
 				</plugin>
 			</plugins>
@@ -160,12 +168,13 @@
 
 
 			<!-- log4j dependency -->
+			<!-- 
 			<dependency>
 				<groupId>log4j</groupId>
 				<artifactId>log4j</artifactId>
 				<version>1.2.14</version>
 			</dependency>
-
+ -->
 
 
 			<!-- jdbc driver -->

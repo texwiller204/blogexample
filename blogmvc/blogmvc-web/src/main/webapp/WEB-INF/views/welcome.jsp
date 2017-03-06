@@ -11,8 +11,8 @@
 <section>
     <div class="jumbotron">
         <div class="container">
-            <h1 align="center"> ${greeting} </h1>
-            <p align="center"> ${tagline} </p>
+            <h1 align="center"> greeting-> ${greeting} </h1>
+            <p align="center"> tagline-> ${tagline} </p>
         </div>
     </div>
 </section>
