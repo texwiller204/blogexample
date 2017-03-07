@@ -12,47 +12,49 @@
 	<properties>
 		<!-- java versions -->
 		<java-version>1.8</java-version>
-        <junit.version>4.11</junit.version>
+		<junit.version>4.11</junit.version>
 
 		<project-version>1.0</project-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
- 
-		<persistence-api-version>1.0.2</persistence-api-version>
-		<org.eclipse.persistence-version>2.5.1</org.eclipse.persistence-version>
 
- 
+
 		<spring.version>4.3.3.RELEASE</spring.version>
 		<spring.security.version>3.2.8.RELEASE</spring.security.version>
-		<spring-data-jpa.version>1.10.7.RELEASE</spring-data-jpa.version>		
+		<spring-data-jpa.version>1.11.0.RELEASE</spring-data-jpa.version>
+		<spring-data-commons.version>1.13.0.RELEASE</spring-data-commons.version>
 		<hibernate.version>4.3.6.Final</hibernate.version>
-		
-				
-		<!-- <tomcat-version>8.0.36</tomcat-version> -->
-		
-		<!--  <tomcat.version>7.0.63</tomcat.version> -->  
-		
 
-		
-		
+<!--	
+	 	<tomcat.version>8.0.15</tomcat.version>
+-->
+		<tomcat.version>7.0.75</tomcat.version>
+        <mysql.version>6.0.5</mysql.version>
+
+
 		<javax.servlet.jstl.version>1.1.2</javax.servlet.jstl.version>
-        <taglibs.standard.version>1.1.2</taglibs.standard.version>
-        <org.sitemesh.sitemesh.version>3.0-alpha-2</org.sitemesh.sitemesh.version>
-        <javax.servlet-api.version>3.0.1</javax.servlet-api.version>
-        <javax.servlet.jsp.jsp-api>2.2</javax.servlet.jsp.jsp-api>
-        
+		<taglibs.standard.version>1.1.2</taglibs.standard.version>
+		<org.sitemesh.sitemesh.version>3.0-alpha-2</org.sitemesh.sitemesh.version>
+		<javax.servlet-api.version>3.0.1</javax.servlet-api.version>
+		<javax.servlet.jsp.jsp-api>2.2</javax.servlet.jsp.jsp-api>
+
 
 		<maven.compiler-version>3.3</maven.compiler-version>
 
 		<org.slf4j-version>1.7.12</org.slf4j-version>
 
-		<persistence-api-version>1.0.2</persistence-api-version>
-		<org.eclipse.persistence-version>2.5.1</org.eclipse.persistence-version>
+		<persistence-api.version>1.0.2</persistence-api.version>
+		<org.eclipse.persistence.version>2.5.1</org.eclipse.persistence.version>
 
 
 		<servlet.api-version>2.5</servlet.api-version>
 
 
+
+       
+                
+      
+        
 
 	</properties>
 
@@ -72,12 +74,12 @@
 		</repository> <repository> <id>com.springsource.repository.bundles.external</id> 
 		<name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name> 
 		<url>http://repository.springsource.com/maven/bundles/external</url> </repository> -->
-		
-<pluginRepositories>
-	<pluginRepository>
-	         <id>codehaus</id>
-        <url>http://repository.codehaus.org/org/codehaus</url>
-        			<releases>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>codehaus</id>
+			<url>http://repository.codehaus.org/org/codehaus</url>
+			<releases>
 				<enabled>true</enabled>
 			</releases>
 			<snapshots>
@@ -86,8 +88,8 @@
 		</pluginRepository>
 
 
-		
-	
+
+
 		<pluginRepository>
 			<id>eap</id>
 			<url>http://maven.repository.redhat.com/techpreview/all</url>
@@ -112,6 +114,12 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-assembly-plugin</artifactId>
 					<version>2.6</version>
+				</plugin>
+
+				<plugin>
+				  <groupId>org.apache.tomcat.maven</groupId>
+				  <artifactId>tomcat7-maven-plugin</artifactId>
+				  <version>2.2</version>
 				</plugin>
 
 				<plugin>
@@ -154,7 +162,7 @@
 						<downloadJavadocs>false</downloadJavadocs>
 						<!-- Avoid type mvn eclipse:eclipse -Dwtpversion=2.0 -->
 						<wtpversion>2.0</wtpversion>
-						<wtpContextName>blogmvc-web</wtpContextName> 
+						<wtpContextName>blogmvc-web</wtpContextName>
 					</configuration>
 				</plugin>
 			</plugins>
@@ -166,23 +174,6 @@
 		<dependencies>
 
 
-
-			<!-- log4j dependency -->
-			<!-- 
-			<dependency>
-				<groupId>log4j</groupId>
-				<artifactId>log4j</artifactId>
-				<version>1.2.14</version>
-			</dependency>
- -->
-
-
-			<!-- jdbc driver -->
-			<dependency>
-				<groupId>mysql</groupId>
-				<artifactId>mysql-connector-java</artifactId>
-				<version>5.1.38</version>
-			</dependency>
 
 			<!-- web -->
 			<dependency>

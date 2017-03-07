@@ -13,9 +13,9 @@
 	<!-- <name>blogmvc-config</name> <description>blogmvc config</description> 
 		<groupId>com.wheezy.blog</groupId> <version>0.0.1-SNAPSHOT</version> -->
 
-    <packaging>jar</packaging>
-    <name>Resource For WebApp</name>
-  
+	<packaging>jar</packaging>
+	<name>Resource For WebApp</name>
+
 	<build>
 		<filters>
 			<filter>${filter-file-name}</filter>
@@ -60,6 +60,9 @@
 					<descriptors>
 						<descriptor>src/main/assembly/resources.xml</descriptor>
 					</descriptors>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
 				</configuration>
 				<executions>
 					<execution>
@@ -67,7 +70,7 @@
 						<phase>package</phase>
 						<goals>
 							<goal>single</goal>
-						</goals>						
+						</goals>
 					</execution>
 				</executions>
 			</plugin>

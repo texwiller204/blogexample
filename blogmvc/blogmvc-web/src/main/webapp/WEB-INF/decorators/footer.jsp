@@ -1,6 +1,6 @@
 <%@ include file="/WEB-INF/imports.jsp"%>
 
-<%@taglib prefix="util" tagdir="/WEB-INF/tags/util"%>
+<%@taglib prefix="util" tagdir="/WEB-INF/tags/"%>
 
 
 <spring:message var="telepUrl" code="telep.url.main"/>
