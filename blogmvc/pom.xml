@@ -25,11 +25,11 @@
 		<spring-data-commons.version>1.13.0.RELEASE</spring-data-commons.version>
 		<hibernate.version>4.3.6.Final</hibernate.version>
 
-<!--	
+<!--
 	 	<tomcat.version>8.0.15</tomcat.version>
 -->
-		<tomcat.version>7.0.75</tomcat.version>
-        <mysql.version>6.0.5</mysql.version>
+                <tomcat.version>7.0.75</tomcat.version>
+                <mysql.version>6.0.5</mysql.version>
 
 
 		<javax.servlet.jstl.version>1.1.2</javax.servlet.jstl.version>
@@ -50,12 +50,6 @@
 		<servlet.api-version>2.5</servlet.api-version>
 
 
-
-       
-                
-      
-        
-
 	</properties>
 
 
@@ -69,10 +63,10 @@
 		<module>blogmvc-config</module>
 	</modules>
 
-	<!-- <repository> <id>com.springsource.repository.bundles.release</id> <name>SpringSource 
-		Enterprise Bundle Repository - SpringSource Bundle Releases</name> <url>http://repository.springsource.com/maven/bundles/release</url> 
-		</repository> <repository> <id>com.springsource.repository.bundles.external</id> 
-		<name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name> 
+	<!-- <repository> <id>com.springsource.repository.bundles.release</id> <name>SpringSource
+		Enterprise Bundle Repository - SpringSource Bundle Releases</name> <url>http://repository.springsource.com/maven/bundles/release</url>
+		</repository> <repository> <id>com.springsource.repository.bundles.external</id>
+		<name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
 		<url>http://repository.springsource.com/maven/bundles/external</url> </repository> -->
 
 	<pluginRepositories>

@@ -53,8 +53,8 @@
 									<classifier>resources</classifier>
 									<type>zip</type>
 									<overWrite>true</overWrite>
-									<outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/classes</outputDirectory>
-									<!-- <outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/config</outputDirectory> -->
+									<!-- <outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/classes</outputDirectory> -->
+									<outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/config</outputDirectory> 
 								</artifactItem>
 							</artifactItems>
 						</configuration>
@@ -155,7 +155,7 @@
 			<version>${spring-data-jpa.version}</version>
 		</dependency>
 
-<!-- 
+<!---
 		<dependency>
 			<groupId>javax.persistence</groupId>
 			<artifactId>persistence-api</artifactId>
@@ -168,14 +168,14 @@
 		  <version>1.0.1.Final</version>
 		</dependency>
 
-<!-- 
+<!--
 		<dependency>
 			<groupId>org.eclipse.persistence</groupId>
 			<artifactId>eclipselink</artifactId>
 			<version>${org.eclipse.persistence.version}</version>
 		</dependency>
-	
-		
+
+
 		  <dependency>
 		    <groupId>org.eclipse.persistence</groupId>
 		    <artifactId>javax.persistence</artifactId>
@@ -214,11 +214,11 @@
 			<version>${spring.security.version}</version>
 		</dependency>
 
-		<dependency>
+		<!--<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
 			<version>${spring.security.version}</version>
-		</dependency>
+		</dependency>  -->
 
 		<dependency>
 			<groupId>org.sitemesh</groupId>
@@ -280,14 +280,15 @@
 
 
 		<!-- Tomcat version -->
-		<!-- <dependency> <groupId>org.apache.tomcat.embed</groupId> <artifactId>tomcat-embed-core</artifactId> 
-			<version>${tomcat.version}</version> </dependency> <dependency> <groupId>org.apache.tomcat</groupId> 
-			<artifactId>tomcat-util</artifactId> <version>${tomcat.version}</version> 
-			</dependency> <dependency> <groupId>org.apache.tomcat</groupId> <artifactId>tomcat-coyote</artifactId> 
-			<version>${tomcat.version}</version> </dependency> <dependency> <groupId>org.apache.tomcat</groupId> 
-			<artifactId>tomcat-api</artifactId> <version>${tomcat.version}</version> 
+		<!-- <dependency> <groupId>org.apache.tomcat.embed</groupId> <artifactId>tomcat-embed-core</artifactId>
+			<version>${tomcat.version}</version> </dependency> <dependency> <groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-util</artifactId> <version>${tomcat.version}</version>
+			</dependency> <dependency> <groupId>org.apache.tomcat</groupId> <artifactId>tomcat-coyote</artifactId>
+			<version>${tomcat.version}</version> </dependency> <dependency> <groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-api</artifactId> <version>${tomcat.version}</version>
 			</dependency> -->
 
+			<!--
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-jdbc</artifactId>
@@ -300,26 +301,26 @@
 			<artifactId>tomcat-dbcp</artifactId>
 			<version>${tomcat.version}</version>
 			<scope>provided</scope>
-		</dependency>
+		</dependency> -->
 
-		<!-- <dependency> <groupId>org.apache.tomcat</groupId> <artifactId>tomcat-servlet-api</artifactId> 
-			<version>${tomcat.version}</version> </dependency> <dependency> <groupId>org.apache.tomcat</groupId> 
-			<artifactId>tomcat-jsp-api</artifactId> <version>${tomcat.version}</version> 
-			</dependency> <dependency> <groupId>org.apache.tomcat</groupId> <artifactId>tomcat-jasper</artifactId> 
-			<version>${tomcat.version}</version> </dependency> <dependency> <groupId>org.apache.tomcat</groupId> 
-			<artifactId>tomcat-jasper-el</artifactId> <version>${tomcat.version}</version> 
-			</dependency> <dependency> <groupId>org.apache.tomcat</groupId> <artifactId>tomcat-el-api</artifactId> 
-			<version>${tomcat.version}</version> </dependency> <dependency> <groupId>org.apache.tomcat</groupId> 
-			<artifactId>tomcat-catalina</artifactId> <version>${tomcat.version}</version> 
-			</dependency> <dependency> <groupId>org.apache.tomcat</groupId> <artifactId>tomcat-tribes</artifactId> 
-			<version>${tomcat.version}</version> </dependency> <dependency> <groupId>org.apache.tomcat</groupId> 
-			<artifactId>tomcat-catalina-ha</artifactId> <version>${tomcat.version}</version> 
-			</dependency> <dependency> <groupId>org.apache.tomcat</groupId> <artifactId>tomcat-annotations-api</artifactId> 
-			<version>${tomcat.version}</version> </dependency> <dependency> <groupId>org.apache.tomcat</groupId> 
-			<artifactId>tomcat-juli</artifactId> <version>${tomcat.version}</version> 
-			</dependency> <dependency> <groupId>org.apache.tomcat.embed</groupId> <artifactId>tomcat-embed-logging-juli</artifactId> 
-			<version>${tomcat.version}</version> </dependency> <dependency> <groupId>org.apache.tomcat.embed</groupId> 
-			<artifactId>tomcat-embed-logging-log4j</artifactId> <version>${tomcat.version}</version> 
+		<!-- <dependency> <groupId>org.apache.tomcat</groupId> <artifactId>tomcat-servlet-api</artifactId>
+			<version>${tomcat.version}</version> </dependency> <dependency> <groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jsp-api</artifactId> <version>${tomcat.version}</version>
+			</dependency> <dependency> <groupId>org.apache.tomcat</groupId> <artifactId>tomcat-jasper</artifactId>
+			<version>${tomcat.version}</version> </dependency> <dependency> <groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jasper-el</artifactId> <version>${tomcat.version}</version>
+			</dependency> <dependency> <groupId>org.apache.tomcat</groupId> <artifactId>tomcat-el-api</artifactId>
+			<version>${tomcat.version}</version> </dependency> <dependency> <groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-catalina</artifactId> <version>${tomcat.version}</version>
+			</dependency> <dependency> <groupId>org.apache.tomcat</groupId> <artifactId>tomcat-tribes</artifactId>
+			<version>${tomcat.version}</version> </dependency> <dependency> <groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-catalina-ha</artifactId> <version>${tomcat.version}</version>
+			</dependency> <dependency> <groupId>org.apache.tomcat</groupId> <artifactId>tomcat-annotations-api</artifactId>
+			<version>${tomcat.version}</version> </dependency> <dependency> <groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-juli</artifactId> <version>${tomcat.version}</version>
+			</dependency> <dependency> <groupId>org.apache.tomcat.embed</groupId> <artifactId>tomcat-embed-logging-juli</artifactId>
+			<version>${tomcat.version}</version> </dependency> <dependency> <groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-logging-log4j</artifactId> <version>${tomcat.version}</version>
 			</dependency> -->
 
 
@@ -327,7 +328,7 @@
 			<dependency>
 				<groupId>mysql</groupId>
 				<artifactId>mysql-connector-java</artifactId>
-				<version>${mysql.version}</version>				
+				<version>${mysql.version}</version>
 			</dependency>
 
 

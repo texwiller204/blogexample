@@ -1,3 +1,3 @@
 #! /bin/sh
 
-mvn clean && mvn compile && mvn tomcat7:run
+mvn clean && mvn install && mvn tomcat7:run

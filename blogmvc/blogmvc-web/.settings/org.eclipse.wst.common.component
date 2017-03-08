@@ -70,6 +70,9 @@
     <dependent-module archiveName="aspectjrt-1.8.10.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/aspectj/aspectjrt/1.8.10/aspectjrt-1.8.10.jar">
       <dependency-type>uses</dependency-type>
     </dependent-module>
+    <dependent-module archiveName="spring-data-commons-core-1.1.0.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/springframework/data/spring-data-commons-core/1.1.0.RELEASE/spring-data-commons-core-1.1.0.RELEASE.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
     <dependent-module archiveName="hibernate-entitymanager-4.3.6.Final.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/hibernate/hibernate-entitymanager/4.3.6.Final/hibernate-entitymanager-4.3.6.Final.jar">
       <dependency-type>uses</dependency-type>
     </dependent-module>
@@ -121,22 +124,19 @@
     <dependent-module archiveName="classmate-0.8.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/fasterxml/classmate/0.8.0/classmate-0.8.0.jar">
       <dependency-type>uses</dependency-type>
     </dependent-module>
-    <dependent-module archiveName="persistence-api-1.0.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/javax/persistence/persistence-api/1.0.2/persistence-api-1.0.2.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="spring-data-commons-core-1.1.0.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/springframework/data/spring-data-commons-core/1.1.0.RELEASE/spring-data-commons-core-1.1.0.RELEASE.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
     <dependent-module archiveName="blogmvc-repository.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/blogmvc-repository/blogmvc-repository">
       <dependency-type>uses</dependency-type>
     </dependent-module>
     <dependent-module archiveName="jta-1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/javax/transaction/jta/1.1/jta-1.1.jar">
       <dependency-type>uses</dependency-type>
     </dependent-module>
-    <dependent-module archiveName="mysql-connector-java-5.1.38.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar">
+    <dependent-module archiveName="mysql-connector-java-6.0.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/mysql/mysql-connector-java/6.0.5/mysql-connector-java-6.0.5.jar">
       <dependency-type>uses</dependency-type>
     </dependent-module>
     <dependent-module archiveName="blogmvc-service.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/blogmvc-service/blogmvc-service">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="hibernate-jpa-2.0-api-1.0.1.Final.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar">
       <dependency-type>uses</dependency-type>
     </dependent-module>
     <dependent-module archiveName="spring-security-core-3.2.8.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/springframework/security/spring-security-core/3.2.8.RELEASE/spring-security-core-3.2.8.RELEASE.jar">
@@ -148,94 +148,13 @@
     <dependent-module archiveName="spring-security-web-3.2.8.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/springframework/security/spring-security-web/3.2.8.RELEASE/spring-security-web-3.2.8.RELEASE.jar">
       <dependency-type>uses</dependency-type>
     </dependent-module>
-    <dependent-module archiveName="spring-security-config-3.2.8.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/springframework/security/spring-security-config/3.2.8.RELEASE/spring-security-config-3.2.8.RELEASE.jar">
+    <dependent-module archiveName="sitemesh-3.0-alpha-2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/sitemesh/sitemesh/3.0-alpha-2/sitemesh-3.0-alpha-2.jar">
       <dependency-type>uses</dependency-type>
     </dependent-module>
     <dependent-module archiveName="standard-1.1.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/taglibs/standard/1.1.2/standard-1.1.2.jar">
       <dependency-type>uses</dependency-type>
     </dependent-module>
     <dependent-module archiveName="jstl-1.1.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/javax/servlet/jstl/1.1.2/jstl-1.1.2.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="sitemesh-3.0-alpha-2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/sitemesh/sitemesh/3.0-alpha-2/sitemesh-3.0-alpha-2.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-catalina-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-catalina/8.0.36/tomcat-catalina-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-servlet-api-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-servlet-api/8.0.36/tomcat-servlet-api-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-jsp-api-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-jsp-api/8.0.36/tomcat-jsp-api-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-el-api-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-el-api/8.0.36/tomcat-el-api-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-juli-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-juli/8.0.36/tomcat-juli-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-annotations-api-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-annotations-api/8.0.36/tomcat-annotations-api-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-api-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-api/8.0.36/tomcat-api-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-jni-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-jni/8.0.36/tomcat-jni-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-coyote-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-coyote/8.0.36/tomcat-coyote-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-util-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-util/8.0.36/tomcat-util-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-util-scan-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-util-scan/8.0.36/tomcat-util-scan-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-catalina-ant-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-catalina-ant/8.0.36/tomcat-catalina-ant-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-catalina-ha-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-catalina-ha/8.0.36/tomcat-catalina-ha-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-tribes-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-tribes/8.0.36/tomcat-tribes-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-storeconfig-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-storeconfig/8.0.36/tomcat-storeconfig-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="ecj-4.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/eclipse/scout/sdk/deps/ecj/4.5/ecj-4.5.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-jasper-el-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-jasper-el/8.0.36/tomcat-jasper-el-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-jasper-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-jasper/8.0.36/tomcat-jasper-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="ecj-4.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/eclipse/jdt/core/compiler/ecj/4.5/ecj-4.5.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-dbcp-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-dbcp/8.0.36/tomcat-dbcp-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-i18n-es-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-i18n-es/8.0.36/tomcat-i18n-es-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-i18n-fr-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-i18n-fr/8.0.36/tomcat-i18n-fr-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-i18n-ja-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-i18n-ja/8.0.36/tomcat-i18n-ja-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-jdbc-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-jdbc/8.0.36/tomcat-jdbc-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-websocket-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-websocket/8.0.36/tomcat-websocket-8.0.36.jar">
-      <dependency-type>uses</dependency-type>
-    </dependent-module>
-    <dependent-module archiveName="tomcat-websocket-api-8.0.36.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/apache/tomcat/tomcat-websocket-api/8.0.36/tomcat-websocket-api-8.0.36.jar">
       <dependency-type>uses</dependency-type>
     </dependent-module>
     <wb-resource deploy-path="/WEB-INF/classes" source-path="src/main/java"/>

@@ -62,7 +62,7 @@
 					</descriptors>
 					<descriptorRefs>
 						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
+					</descriptorRefs>  
 				</configuration>
 				<executions>
 					<execution>

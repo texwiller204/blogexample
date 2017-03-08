@@ -1,0 +1,168 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] blogmvc
+[INFO] Resource For WebApp
+[INFO] blogmvc-utils
+[INFO] blogmvc-model
+[INFO] blogmvc-repository
+[INFO] blogmvc-service
+[INFO] blogmvc-web Maven Webapp
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building blogmvc 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-eclipse-plugin:2.9:eclipse (default-cli) > generate-resources @ blogmvc >>>
+[INFO] 
+[INFO] <<< maven-eclipse-plugin:2.9:eclipse (default-cli) < generate-resources @ blogmvc <<<
+[INFO] 
+[INFO] --- maven-eclipse-plugin:2.9:eclipse (default-cli) @ blogmvc ---
+[INFO] Not running eclipse plugin goal for pom project
+[INFO] Adding support for WTP version 2.0.
+[INFO] Using Eclipse Workspace: C:\Users\108012516\workspace
+[INFO] no substring wtp server match.
+[INFO] Using as WTP server : Tomcat v8.0
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Resource For WebApp 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-eclipse-plugin:2.9:eclipse (default-cli) > generate-resources @ blogmvc-config >>>
+[INFO] 
+[INFO] <<< maven-eclipse-plugin:2.9:eclipse (default-cli) < generate-resources @ blogmvc-config <<<
+[INFO] 
+[INFO] --- maven-eclipse-plugin:2.9:eclipse (default-cli) @ blogmvc-config ---
+[INFO] Adding support for WTP version 2.0.
+[INFO] Using Eclipse Workspace: C:\Users\108012516\workspace
+[INFO] no substring wtp server match.
+[INFO] Using as WTP server : Tomcat v8.0
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Wrote Eclipse project for "blogmvc-config" to C:\Users\108012516\workspace\blogmvc\blogmvc-config.
+[INFO] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building blogmvc-utils 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-eclipse-plugin:2.9:eclipse (default-cli) > generate-resources @ blogmvc-utils >>>
+[INFO] 
+[INFO] <<< maven-eclipse-plugin:2.9:eclipse (default-cli) < generate-resources @ blogmvc-utils <<<
+[INFO] 
+[INFO] --- maven-eclipse-plugin:2.9:eclipse (default-cli) @ blogmvc-utils ---
+[INFO] Adding support for WTP version 2.0.
+[INFO] Using Eclipse Workspace: C:\Users\108012516\workspace
+[INFO] no substring wtp server match.
+[INFO] Using as WTP server : Tomcat v8.0
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Wrote Eclipse project for "blogmvc-utils" to C:\Users\108012516\workspace\blogmvc\blogmvc-utils.
+[INFO] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building blogmvc-model 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-eclipse-plugin:2.9:eclipse (default-cli) > generate-resources @ blogmvc-model >>>
+[INFO] 
+[INFO] <<< maven-eclipse-plugin:2.9:eclipse (default-cli) < generate-resources @ blogmvc-model <<<
+[INFO] 
+[INFO] --- maven-eclipse-plugin:2.9:eclipse (default-cli) @ blogmvc-model ---
+[INFO] Adding support for WTP version 2.0.
+[INFO] Using Eclipse Workspace: C:\Users\108012516\workspace
+[INFO] no substring wtp server match.
+[INFO] Using as WTP server : Tomcat v8.0
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Wrote Eclipse project for "blogmvc-model" to C:\Users\108012516\workspace\blogmvc\blogmvc-model.
+[INFO] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building blogmvc-repository 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-eclipse-plugin:2.9:eclipse (default-cli) > generate-resources @ blogmvc-repository >>>
+[INFO] 
+[INFO] <<< maven-eclipse-plugin:2.9:eclipse (default-cli) < generate-resources @ blogmvc-repository <<<
+[INFO] 
+[INFO] --- maven-eclipse-plugin:2.9:eclipse (default-cli) @ blogmvc-repository ---
+[INFO] Adding support for WTP version 2.0.
+[INFO] Using Eclipse Workspace: C:\Users\108012516\workspace
+[INFO] no substring wtp server match.
+[INFO] Using as WTP server : Tomcat v8.0
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Wrote Eclipse project for "blogmvc-repository" to C:\Users\108012516\workspace\blogmvc\blogmvc-repository.
+[INFO] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building blogmvc-service 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-eclipse-plugin:2.9:eclipse (default-cli) > generate-resources @ blogmvc-service >>>
+[INFO] 
+[INFO] <<< maven-eclipse-plugin:2.9:eclipse (default-cli) < generate-resources @ blogmvc-service <<<
+[INFO] 
+[INFO] --- maven-eclipse-plugin:2.9:eclipse (default-cli) @ blogmvc-service ---
+[INFO] Adding support for WTP version 2.0.
+[INFO] Using Eclipse Workspace: C:\Users\108012516\workspace
+[INFO] no substring wtp server match.
+[INFO] Using as WTP server : Tomcat v8.0
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Wrote Eclipse project for "blogmvc-service" to C:\Users\108012516\workspace\blogmvc\blogmvc-service.
+[INFO] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building blogmvc-web Maven Webapp 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-eclipse-plugin:2.9:eclipse (default-cli) > generate-resources @ blogmvc-web >>>
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:unpack (unpack-config) @ blogmvc-web ---
+[INFO] Configured Artifact: com.wheezy.blog:blogmvc-config:resources:?:zip
+[INFO] Unpacking C:\Users\108012516\.m2\repository\com\wheezy\blog\blogmvc-config\0.0.1-SNAPSHOT\blogmvc-config-0.0.1-SNAPSHOT-resources.zip to C:\Users\108012516\workspace\blogmvc\blogmvc-web\target\blogmvc-web-0.0.1-SNAPSHOT-env-dev\WEB-INF\config with includes "" and excludes ""
+[INFO] 
+[INFO] <<< maven-eclipse-plugin:2.9:eclipse (default-cli) < generate-resources @ blogmvc-web <<<
+[INFO] 
+[INFO] --- maven-eclipse-plugin:2.9:eclipse (default-cli) @ blogmvc-web ---
+[INFO] Adding support for WTP version 2.0.
+[INFO] Using Eclipse Workspace: C:\Users\108012516\workspace
+[INFO] no substring wtp server match.
+[INFO] Using as WTP server : Tomcat v8.0
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+Downloading: http://repo.spring.io/libs-snapshot-local/org/apache/tomcat/tomcat-jdbc/7.0.75/tomcat-jdbc-7.0.75-sources.jar
+Downloading: http://repo.spring.io/libs-milestone-local/org/apache/tomcat/tomcat-jdbc/7.0.75/tomcat-jdbc-7.0.75-sources.jar
+Downloading: http://repo.spring.io/release/org/apache/tomcat/tomcat-jdbc/7.0.75/tomcat-jdbc-7.0.75-sources.jar
+Downloading: https://repository.jboss.org/org/apache/tomcat/tomcat-jdbc/7.0.75/tomcat-jdbc-7.0.75-sources.jar
+Downloading: https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-jdbc/7.0.75/tomcat-jdbc-7.0.75-sources.jar
+3/106 KB   5/106 KB   8/106 KB   11/106 KB   13/106 KB   16/106 KB   19/106 KB   21/106 KB   24/106 KB   27/106 KB   29/106 KB   32/106 KB   36/106 KB   40/106 KB   44/106 KB   48/106 KB   52/106 KB   56/106 KB   60/106 KB   64/106 KB   68/106 KB   72/106 KB   76/106 KB   80/106 KB   84/106 KB   88/106 KB   92/106 KB   96/106 KB   100/106 KB   104/106 KB   106/106 KB                Downloaded: https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-jdbc/7.0.75/tomcat-jdbc-7.0.75-sources.jar (106 KB at 224.9 KB/sec)
+Downloading: http://repo.spring.io/libs-snapshot-local/org/apache/tomcat/tomcat-juli/7.0.75/tomcat-juli-7.0.75-sources.jar
+             Downloading: http://repo.spring.io/libs-milestone-local/org/apache/tomcat/tomcat-juli/7.0.75/tomcat-juli-7.0.75-sources.jar
+             Downloading: http://repo.spring.io/release/org/apache/tomcat/tomcat-juli/7.0.75/tomcat-juli-7.0.75-sources.jar
+             Downloading: https://repository.jboss.org/org/apache/tomcat/tomcat-juli/7.0.75/tomcat-juli-7.0.75-sources.jar
+             Downloading: https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-juli/7.0.75/tomcat-juli-7.0.75-sources.jar
+3/32 KB      5/32 KB   8/32 KB   11/32 KB   13/32 KB   16/32 KB   19/32 KB   21/32 KB   24/32 KB   27/32 KB   29/32 KB   32/32 KB   32/32 KB              Downloaded: https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-juli/7.0.75/tomcat-juli-7.0.75-sources.jar (32 KB at 67.9 KB/sec)
+Downloading: http://repo.spring.io/libs-snapshot-local/org/apache/tomcat/tomcat-dbcp/7.0.75/tomcat-dbcp-7.0.75-sources.jar
+           Downloading: http://repo.spring.io/libs-milestone-local/org/apache/tomcat/tomcat-dbcp/7.0.75/tomcat-dbcp-7.0.75-sources.jar
+           Downloading: http://repo.spring.io/release/org/apache/tomcat/tomcat-dbcp/7.0.75/tomcat-dbcp-7.0.75-sources.jar
+           Downloading: https://repository.jboss.org/org/apache/tomcat/tomcat-dbcp/7.0.75/tomcat-dbcp-7.0.75-sources.jar
+           Downloading: https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-dbcp/7.0.75/tomcat-dbcp-7.0.75-sources.jar
+3/220 KB   5/220 KB   8/220 KB   11/220 KB   13/220 KB   16/220 KB   19/220 KB   21/220 KB   24/220 KB   27/220 KB   29/220 KB   32/220 KB   36/220 KB   40/220 KB   44/220 KB   48/220 KB   52/220 KB   56/220 KB   60/220 KB   64/220 KB   68/220 KB   72/220 KB   76/220 KB   80/220 KB   84/220 KB   88/220 KB   92/220 KB   96/220 KB   100/220 KB   104/220 KB   108/220 KB   112/220 KB   116/220 KB   120/220 KB   124/220 KB   128/220 KB   132/220 KB   136/220 KB   140/220 KB   144/220 KB   148/220 KB   152/220 KB   156/220 KB   160/220 KB   164/220 KB   168/220 KB   172/220 KB   176/220 KB   180/220 KB   184/220 KB   188/220 KB   192/220 KB   196/220 KB   200/220 KB   204/220 KB   208/220 KB   212/220 KB   216/220 KB   220/220 KB   220/220 KB                Downloaded: https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-dbcp/7.0.75/tomcat-dbcp-7.0.75-sources.jar (220 KB at 251.1 KB/sec)
+[INFO] Wrote Eclipse project for "blogmvc-web" to C:\Users\108012516\workspace\blogmvc\blogmvc-web.
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] blogmvc ............................................ SUCCESS [  1.750 s]
+[INFO] Resource For WebApp ................................ SUCCESS [  0.236 s]
+[INFO] blogmvc-utils ...................................... SUCCESS [  0.125 s]
+[INFO] blogmvc-model ...................................... SUCCESS [  0.936 s]
+[INFO] blogmvc-repository ................................. SUCCESS [  0.452 s]
+[INFO] blogmvc-service .................................... SUCCESS [  0.265 s]
+[INFO] blogmvc-web Maven Webapp ........................... SUCCESS [ 11.221 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 15.798 s
+[INFO] Finished at: 2017-03-08T17:20:05+01:00
+[INFO] Final Memory: 13M/38M
+[INFO] ------------------------------------------------------------------------
