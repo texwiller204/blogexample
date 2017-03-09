@@ -1,31 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="
-        http://www.springframework.org/schema/beans     
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:repository="http://www.springframework.org/schema/data/repository"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/data/jpa
+        http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd
-        http://www.springframework.org/schema/context 
-        http://www.springframework.org/schema/context/spring-context.xsd">
-
-	<mvc:annotation-driven/>
+        http://www.springframework.org/schema/data/repository
+        http://www.springframework.org/schema/data/repository/spring-repository.xsd">
+	
     
+	<!-- Enables the Spring MVC @Controller programming model -->
+     <mvc:annotation-driven/>	 
+	 <context:component-scan base-package="com.wheezy.blogmvc"/>
+
 
 	<!-- <import resource="mvc.xml"/> -->
-	  <import resource="db.xml"/> 
+	<!--   <import resource="db.xml"/> --> 
 	  
 	<!-- <import resource="profileproperty.xml"/> -->
 	<!-- <import resource="multithreading.xml"/> -->
 	
-	
-	<!-- Scans for application @Components to deploy -->
-	<context:component-scan base-package="com.wheezy.blogmvc.controller" />
-	<context:component-scan base-package="com.wheezy.blogmvc.services"/>
-    <context:component-scan base-package="com.wheezy.blogmvc.repository"/>
-    
 
+
+    
+    
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
+		in the /WEB-INF/views directory -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver ">
 		<property name="prefix" value="/WEB-INF/views/" />
@@ -33,11 +41,11 @@
 	</bean>
 
 
-<!-- 
+
     <bean name="pizzaRepository"
           class="com.wheezy.blogmvc.repository.InMemPizzaRepository"
           init-method="init"/>
-           -->
+           
           
 
 

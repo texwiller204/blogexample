@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:repository="http://www.springframework.org/schema/data/repository"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/data/jpa
+        http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/data/repository
+        http://www.springframework.org/schema/data/repository/spring-repository.xsd">
+
+
+
+    <tx:annotation-driven/>
+    <context:annotation-config/>
+    
+    
+	<!-- Scans for application @Components to deploy -->
+	 <!--<context:component-scan base-package="com.wheezy.blogmvc.repository"/>-->
+	<context:component-scan base-package="com.wheezy.blogmvc.services"/>
+	<context:component-scan base-package="com.wheezy.blogmvc.model" />	
+    
+    
+    <!-- 
+	<bean
+		class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:filters/env-dev.properties</value> 
+				<value>classpath:config/jdbc-mysql-db.properties</value>
+			</list>
+		</property>
+	</bean>  -->
+
+    <bean name="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    	<property name="location" value="classpath:config/jdbc-mysql-db.properties"></property>
+    </bean>
+    
+
+	<bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource"
+		destroy-method="close">
+		<!-- Connection Info -->
+		<property name="driverClassName" value="${dataSource.driverClassName}" />
+		<property name="url" value="${dataSource.url}" />
+		<property name="username" value="${dataSource.username}" />
+		<property name="password" value="${dataSource.password}" />
+		
+		
+		<!-- Connection Pooling Info -->
+		<property name="abandonWhenPercentageFull" value="60"></property>
+		<property name="jmxEnabled" value="true"></property>
+		<property name="logAbandoned" value="true"></property>
+		<property name="maxActive" value="50"></property>
+		<property name="maxIdle" value="10"></property>
+		<property name="minIdle" value="5"></property>
+		<property name="testOnBorrow" value="true"></property>
+		<property name="validationQuery" value="SELECT 1"></property>  
+	</bean>
+
+
+	<bean
+		class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+
+
+    
+
+	<!-- Create default configuration for Hibernate -->
+	<bean id="jpaProperties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="properties">
+			<props>
+
+				<prop key="hibernate.dialect">${dataSource.hibernate.Dialect}</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.use_sql_comments">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">${dataSource.hibernate.hbm2ddl.auto} </prop>  <!---->
+
+				<prop key="hibernate.validator.apply_to_ddl">false</prop>
+				<prop key="hibernate.validator.autoregister_listeners">false</prop>
+				<prop key="hibernate.ejb.naming_strategy">${dataSource.hibernate.ejb.naming_strategy}</prop>
+			</props>
+		</property>
+	</bean>
+
+
+
+
+	<bean id="hibernateJpaVendorAdapter"
+		class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+		<property name="showSql" value="true"></property>
+	</bean>
+
+
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+
+<!--
+		<property name="persistenceUnitName" value="blogUnit" /> -->
+
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="com.wheezy.blogmvc.model" />
+
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" >
+			<property name="showSql" value="true"></property>
+	      </bean>
+		</property>
+
+		<property name="jpaProperties" ref="jpaProperties"/>  
+
+        
+	</bean>
+
+ 
+
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+
+</beans>

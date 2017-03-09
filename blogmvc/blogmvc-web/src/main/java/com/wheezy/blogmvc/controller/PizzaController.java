@@ -2,27 +2,34 @@ package com.wheezy.blogmvc.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.wheezy.blogmvc.repository.PizzaRepository;
+import com.wheezy.blogmvc.model.Pizza;
+import com.wheezy.blogmvc.model.PizzaType;
+import com.wheezy.blogmvc.service.PizzaService;
 
 @Controller
-@RequestMapping("/pizza")
 public class PizzaController {
 
     @Autowired
-    private PizzaRepository pizzaRepository;
+    @Qualifier("PizzaService")
+    private PizzaService pizzaService;
 
     public PizzaController() {
+    	
+    	pizzaService.addPizza(new Pizza("Pizza2", 23.0, PizzaType.MEAT));
+    	pizzaService.addPizza(new Pizza("Pizza1", 13.0, PizzaType.SEA));
     }
 
-    @RequestMapping(value = "/pizzaList", method = RequestMethod.GET)
-    public String pizzas(Model model) {
-        System.out.println(pizzaRepository.findAll());
-        model.addAttribute("pizzas", pizzaRepository.findAll());
-        return "pizza/pizzas";
+    @RequestMapping("/pizzas")
+	public String index(Model model) {
+    	
+        System.out.println(pizzaService.getAllPizzas());
+        model.addAttribute("pizzas", pizzaService.getAllPizzas());
+        
+        return "welcome";
     }
 }

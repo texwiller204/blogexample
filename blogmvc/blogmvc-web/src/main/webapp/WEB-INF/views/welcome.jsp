@@ -13,6 +13,8 @@
         <div class="container">
             <h1 align="center"> greeting-> ${greeting} </h1>
             <p align="center"> tagline-> ${tagline} </p>
+            <p align="center"> Date ${date} </p>
+
         </div>
     </div>
 </section>
