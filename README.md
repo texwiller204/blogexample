@@ -20,6 +20,15 @@ A simple blog created with Java/OOP to help me learn Java and familly related te
 - Web server, such as Apache Tomcat 8.0 (tested only on Tomcat, probably works on other web servers too, maybe requires minor modifications).
 
 
+#### Set up MySQL Example
+```
+mysql -u root -p 
+> CREATE USER 'tutorialblog'@'localhost' IDENTIFIED BY 'tutorialmy5ql';
+> GRANT ALL PRIVILEGES ON *.* TO 'tutorialblog'@'localhost';
+> FLUSH PRIVILEGES;
+```
+
+
 
 ###Credits 
 --------- 
