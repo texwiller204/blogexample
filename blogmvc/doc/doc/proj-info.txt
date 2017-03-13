@@ -1,0 +1,4 @@
+mvn archetype:generate  \
+  -DgroupId=com.blog.example \
+  -DartifactId=blogmvc \
+  -DarchetypeArtifactId=maven-archetype-webapp

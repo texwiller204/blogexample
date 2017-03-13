@@ -1,0 +1,150 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] blogmvc
+[INFO] Resource For WebApp
+[INFO] blogmvc-utils
+[INFO] blogmvc-model
+[INFO] blogmvc-repository
+[INFO] blogmvc-service
+[INFO] blogmvc-web Maven Webapp
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building blogmvc 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-eclipse-plugin:2.9:eclipse (default-cli) > generate-resources @ blogmvc >>>
+[INFO] 
+[INFO] <<< maven-eclipse-plugin:2.9:eclipse (default-cli) < generate-resources @ blogmvc <<<
+[INFO] 
+[INFO] --- maven-eclipse-plugin:2.9:eclipse (default-cli) @ blogmvc ---
+[INFO] Not running eclipse plugin goal for pom project
+[INFO] Adding support for WTP version 2.0.
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Resource For WebApp 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-eclipse-plugin:2.9:eclipse (default-cli) > generate-resources @ blogmvc-config >>>
+[INFO] 
+[INFO] <<< maven-eclipse-plugin:2.9:eclipse (default-cli) < generate-resources @ blogmvc-config <<<
+[INFO] 
+[INFO] --- maven-eclipse-plugin:2.9:eclipse (default-cli) @ blogmvc-config ---
+[INFO] Adding support for WTP version 2.0.
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Wrote Eclipse project for "blogmvc-config" to D:\SeafileData\Seafile\JavaDev\JavaWebProject\sampleblog\blogmvc\blogmvc-config.
+[INFO] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building blogmvc-utils 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-eclipse-plugin:2.9:eclipse (default-cli) > generate-resources @ blogmvc-utils >>>
+[INFO] 
+[INFO] <<< maven-eclipse-plugin:2.9:eclipse (default-cli) < generate-resources @ blogmvc-utils <<<
+[INFO] 
+[INFO] --- maven-eclipse-plugin:2.9:eclipse (default-cli) @ blogmvc-utils ---
+[INFO] Adding support for WTP version 2.0.
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Wrote Eclipse project for "blogmvc-utils" to D:\SeafileData\Seafile\JavaDev\JavaWebProject\sampleblog\blogmvc\blogmvc-utils.
+[INFO] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building blogmvc-model 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-eclipse-plugin:2.9:eclipse (default-cli) > generate-resources @ blogmvc-model >>>
+[INFO] 
+[INFO] <<< maven-eclipse-plugin:2.9:eclipse (default-cli) < generate-resources @ blogmvc-model <<<
+[INFO] 
+[INFO] --- maven-eclipse-plugin:2.9:eclipse (default-cli) @ blogmvc-model ---
+[INFO] Adding support for WTP version 2.0.
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Wrote Eclipse project for "blogmvc-model" to D:\SeafileData\Seafile\JavaDev\JavaWebProject\sampleblog\blogmvc\blogmvc-model.
+[INFO] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building blogmvc-repository 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-eclipse-plugin:2.9:eclipse (default-cli) > generate-resources @ blogmvc-repository >>>
+[INFO] 
+[INFO] <<< maven-eclipse-plugin:2.9:eclipse (default-cli) < generate-resources @ blogmvc-repository <<<
+[INFO] 
+[INFO] --- maven-eclipse-plugin:2.9:eclipse (default-cli) @ blogmvc-repository ---
+[INFO] Adding support for WTP version 2.0.
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Wrote Eclipse project for "blogmvc-repository" to D:\SeafileData\Seafile\JavaDev\JavaWebProject\sampleblog\blogmvc\blogmvc-repository.
+[INFO] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building blogmvc-service 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-eclipse-plugin:2.9:eclipse (default-cli) > generate-resources @ blogmvc-service >>>
+[INFO] 
+[INFO] <<< maven-eclipse-plugin:2.9:eclipse (default-cli) < generate-resources @ blogmvc-service <<<
+[INFO] 
+[INFO] --- maven-eclipse-plugin:2.9:eclipse (default-cli) @ blogmvc-service ---
+[INFO] Adding support for WTP version 2.0.
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+Downloading: http://repo.spring.io/libs-snapshot-local/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19-sources.jar
+Downloading: http://repo.spring.io/libs-milestone-local/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19-sources.jar
+Downloading: http://repo.spring.io/release/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19-sources.jar
+Downloading: https://repository.jboss.org/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19-sources.jar
+Downloading: https://repo.maven.apache.org/maven2/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19-sources.jar
+3/746 KB   5/746 KB   8/746 KB   11/746 KB   13/746 KB   16/746 KB   19/746 KB   21/746 KB   24/746 KB   27/746 KB   29/746 KB   32/746 KB   36/746 KB   40/746 KB   44/746 KB   48/746 KB   52/746 KB   56/746 KB   60/746 KB   64/746 KB   68/746 KB   72/746 KB   76/746 KB   80/746 KB   84/746 KB   88/746 KB   92/746 KB   96/746 KB   100/746 KB   104/746 KB   108/746 KB   112/746 KB   116/746 KB   120/746 KB   124/746 KB   128/746 KB   132/746 KB   136/746 KB   140/746 KB   144/746 KB   148/746 KB   152/746 KB   156/746 KB   160/746 KB   164/746 KB   168/746 KB   172/746 KB   176/746 KB   180/746 KB   184/746 KB   188/746 KB   192/746 KB   196/746 KB   200/746 KB   204/746 KB   208/746 KB   212/746 KB   216/746 KB   220/746 KB   224/746 KB   228/746 KB   232/746 KB   236/746 KB   240/746 KB   244/746 KB   248/746 KB   252/746 KB   256/746 KB   260/746 KB   264/746 KB   268/746 KB   272/746 KB   276/746 KB   280/746 KB   284/746 KB   288/746 KB   292/746 KB   296/746 KB   300/746 KB   304/746 KB   308/746 KB   312/746 KB   316/746 KB   320/746 KB   324/746 KB   328/746 KB   332/746 KB   336/746 KB   340/746 KB   344/746 KB   348/746 KB   352/746 KB   356/746 KB   360/746 KB   364/746 KB   368/746 KB   372/746 KB   376/746 KB   380/746 KB   384/746 KB   388/746 KB   392/746 KB   396/746 KB   400/746 KB   404/746 KB   408/746 KB   412/746 KB   416/746 KB   420/746 KB   424/746 KB   428/746 KB   432/746 KB   436/746 KB   440/746 KB   444/746 KB   448/746 KB   452/746 KB   456/746 KB   460/746 KB   464/746 KB   468/746 KB   472/746 KB   476/746 KB   480/746 KB   484/746 KB   488/746 KB   492/746 KB   496/746 KB   500/746 KB   504/746 KB   508/746 KB   512/746 KB   516/746 KB   520/746 KB   524/746 KB   528/746 KB   532/746 KB   536/746 KB   540/746 KB   544/746 KB   548/746 KB   552/746 KB   556/746 KB   560/746 KB   564/746 KB   568/746 KB   572/746 KB   576/746 KB   580/746 KB   584/746 KB   588/746 KB   592/746 KB   596/746 KB   600/746 KB   604/746 KB   608/746 KB   612/746 KB   616/746 KB   620/746 KB   624/746 KB   628/746 KB   632/746 KB   636/746 KB   640/746 KB   644/746 KB   648/746 KB   652/746 KB   656/746 KB   660/746 KB   664/746 KB   668/746 KB   672/746 KB   676/746 KB   680/746 KB   684/746 KB   688/746 KB   692/746 KB   696/746 KB   700/746 KB   704/746 KB   708/746 KB   712/746 KB   716/746 KB   720/746 KB   724/746 KB   728/746 KB   732/746 KB   736/746 KB   740/746 KB   744/746 KB   746/746 KB                Downloaded: https://repo.maven.apache.org/maven2/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19-sources.jar (746 KB at 351.7 KB/sec)
+Downloading: http://repo.spring.io/libs-snapshot-local/org/objenesis/objenesis/2.1/objenesis-2.1-sources.jar
+             Downloading: http://repo.spring.io/libs-milestone-local/org/objenesis/objenesis/2.1/objenesis-2.1-sources.jar
+             Downloading: http://repo.spring.io/release/org/objenesis/objenesis/2.1/objenesis-2.1-sources.jar
+             Downloading: https://repository.jboss.org/org/objenesis/objenesis/2.1/objenesis-2.1-sources.jar
+             Downloading: https://repo.maven.apache.org/maven2/org/objenesis/objenesis/2.1/objenesis-2.1-sources.jar
+3/43 KB      5/43 KB   8/43 KB   11/43 KB   13/43 KB   16/43 KB   19/43 KB   21/43 KB   24/43 KB   27/43 KB   29/43 KB   32/43 KB   36/43 KB   40/43 KB   43/43 KB              Downloaded: https://repo.maven.apache.org/maven2/org/objenesis/objenesis/2.1/objenesis-2.1-sources.jar (43 KB at 161.6 KB/sec)
+[INFO] Wrote Eclipse project for "blogmvc-service" to D:\SeafileData\Seafile\JavaDev\JavaWebProject\sampleblog\blogmvc\blogmvc-service.
+[INFO] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building blogmvc-web Maven Webapp 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-eclipse-plugin:2.9:eclipse (default-cli) > generate-resources @ blogmvc-web >>>
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:unpack (unpack-config) @ blogmvc-web ---
+[INFO] Configured Artifact: com.wheezy.blog:blogmvc-config:resources:?:zip
+Downloading: http://repo.spring.io/libs-snapshot-local/com/wheezy/blog/blogmvc-config/0.0.1-SNAPSHOT/maven-metadata.xml
+Downloading: https://repository.jboss.org/com/wheezy/blog/blogmvc-config/0.0.1-SNAPSHOT/maven-metadata.xml
+                      [INFO] Unpacking C:\Users\108012516\.m2\repository\com\wheezy\blog\blogmvc-config\0.0.1-SNAPSHOT\blogmvc-config-0.0.1-SNAPSHOT-resources.zip to D:\SeafileData\Seafile\JavaDev\JavaWebProject\sampleblog\blogmvc\blogmvc-web\target\blogmvc-web-0.0.1-SNAPSHOT-env-dev\WEB-INF\classes with includes "" and excludes ""
+[INFO] 
+[INFO] <<< maven-eclipse-plugin:2.9:eclipse (default-cli) < generate-resources @ blogmvc-web <<<
+[INFO] 
+[INFO] --- maven-eclipse-plugin:2.9:eclipse (default-cli) @ blogmvc-web ---
+[INFO] Adding support for WTP version 2.0.
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Wrote Eclipse project for "blogmvc-web" to D:\SeafileData\Seafile\JavaDev\JavaWebProject\sampleblog\blogmvc\blogmvc-web.
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] blogmvc ............................................ SUCCESS [  0.655 s]
+[INFO] Resource For WebApp ................................ SUCCESS [  0.125 s]
+[INFO] blogmvc-utils ...................................... SUCCESS [  0.172 s]
+[INFO] blogmvc-model ...................................... SUCCESS [  2.402 s]
+[INFO] blogmvc-repository ................................. SUCCESS [  0.889 s]
+[INFO] blogmvc-service .................................... SUCCESS [  6.771 s]
+[INFO] blogmvc-web Maven Webapp ........................... SUCCESS [  8.595 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 20.420 s
+[INFO] Finished at: 2017-03-10T15:03:40+01:00
+[INFO] Final Memory: 13M/32M
+[INFO] ------------------------------------------------------------------------
